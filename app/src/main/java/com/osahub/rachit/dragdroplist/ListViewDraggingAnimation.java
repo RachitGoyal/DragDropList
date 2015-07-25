@@ -16,16 +16,16 @@ public class ListViewDraggingAnimation extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
 
-        List<ItemPojo> mCheeseList = new ArrayList<>();
-        for (int i = 0; i < Cheeses.sCheeseStrings.length; ++i) {
-            ItemPojo itemPojo = new ItemPojo(Cheeses.sCheeseStrings[i], (int) (Math.random() * 100));
-            mCheeseList.add(itemPojo);
+        List<ItemPojo> itemList = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            ItemPojo itemPojo = new ItemPojo("Name", (int) (Math.random() * 100));
+            itemList.add(itemPojo);
         }
 
-        adapter = new ItemAdapter(this, mCheeseList);
+        adapter = new ItemAdapter(this, itemList);
         DynamicListView listView = (DynamicListView) findViewById(R.id.listview);
 
-        listView.setCheeseList(mCheeseList);
+        listView.setCheeseList(itemList);
         listView.setAdapter(adapter);
         listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
