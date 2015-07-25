@@ -128,7 +128,7 @@ public class SwipeDismissListViewTouchListener implements View.OnTouchListener {
 
                 // TODO: ensure this is a finger, and set a flag
 
-                // Find the child view that was touched (perform a hit test)
+                // Find the child view that was touched (perform a hit test1)
                 Rect rect = new Rect();
                 int childCount = mListView.getChildCount();
                 int[] listViewCoords = new int[2];

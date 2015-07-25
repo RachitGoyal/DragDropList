@@ -1,7 +1,9 @@
 package com.osahub.rachit.dragdroplist;
 
 import android.app.Activity;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -17,10 +19,17 @@ public class ListViewDraggingAnimation extends Activity {
         setContentView(R.layout.activity_list_view);
 
         List<ItemPojo> itemList = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            ItemPojo itemPojo = new ItemPojo("Name", (int) (Math.random() * 100));
-            itemList.add(itemPojo);
-        }
+
+        ItemPojo itemPojo1 = new ItemPojo("Name", (int) (Math.random() * 100), BitmapFactory.decodeResource(getResources(), R.drawable.test1));
+        ItemPojo itemPojo2 = new ItemPojo("Name", (int) (Math.random() * 100), BitmapFactory.decodeResource(getResources(), R.drawable.test2));
+        ItemPojo itemPojo3 = new ItemPojo("Name", (int) (Math.random() * 100), BitmapFactory.decodeResource(getResources(), R.drawable.test3));
+        ItemPojo itemPojo4 = new ItemPojo("Name", (int) (Math.random() * 100), BitmapFactory.decodeResource(getResources(), R.drawable.test4));
+        ItemPojo itemPojo5 = new ItemPojo("Name", (int) (Math.random() * 100), BitmapFactory.decodeResource(getResources(), R.drawable.test5));
+        itemList.add(itemPojo1);
+        itemList.add(itemPojo2);
+        itemList.add(itemPojo3);
+        itemList.add(itemPojo4);
+        itemList.add(itemPojo5);
 
         adapter = new ItemAdapter(this, itemList);
         DynamicListView listView = (DynamicListView) findViewById(R.id.listview);

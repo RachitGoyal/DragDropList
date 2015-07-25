@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
     android:orientation="vertical"
     android:weightSum="10">
 
@@ -19,7 +19,8 @@
             android:layout_height="210dp"
             android:layout_weight="1.5"
             android:scaleType="centerCrop"
-            android:src="@drawable/test"/>
+            android:src="@drawable/test1"
+            android:focusableInTouchMode="false"/>
     </LinearLayout>
 
     <LinearLayout
